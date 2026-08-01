@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Friend Certificate</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffd89b,#19547b);
+overflow:hidden;
+}
+
+.certificate{
+width:90%;
+max-width:700px;
+background:#fffdf7;
+padding:35px;
+border:10px solid #d4af37;
+border-radius:20px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,.3);
+animation:zoom 1s ease;
+position:relative;
+}
+
+.certificate::before{
+content:"🏆";
+font-size:60px;
+display:block;
+margin-bottom:10px;
+}
+
+h1{
+color:#c79b00;
+font-size:40px;
+margin-bottom:10px;
+}
+
+h2{
+color:#ff4081;
+margin:20px 0;
+}
+
+.name{
+font-size:30px;
+font-weight:bold;
+color:#333;
+margin:20px 0;
+border-bottom:2px dashed #888;
+display:inline-block;
+padding:8px 40px;
+}
+
+p{
+font-size:19px;
+line-height:1.8;
+color:#555;
+}
+
+.footer{
+margin-top:30px;
+font-size:20px;
+font-weight:bold;
+color:#ff4d8d;
+}
+
+.badge{
+margin-top:20px;
+font-size:28px;
+}
+
+button{
+margin-top:30px;
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#ff4d8d;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+transform:scale(1.08);
+transition:.3s;
+}
+
+@keyframes zoom{
+from{
+opacity:0;
+transform:scale(.7);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+/* Floating Hearts */
+.heart{
+position:fixed;
+font-size:24px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-120px);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="certificate">
+
+<h1>BEST FRIEND CERTIFICATE</h1>
+
+<h2>This Certificate is Proudly Presented To</h2>
+
+<div class="name">
+nusrath✨
+</div>
+
+<p>
+For being an amazing friend, filling every moment
+with happiness, kindness, laughter and unforgettable
+memories.
+
+Thank you for always being there.
+
+May our friendship last forever.
+</p>
+
+<div class="badge">
+⭐ Best Friend Forever ⭐
+</div>
+
+<div class="footer">
+Presented with ❤️ on Friendship Day 2026
+</div>
+
+<button onclick="alert('Happy Friendship Day! ❤️')">
+Finish 🎉
+</button>
+
+</div>
+
+<script>
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+}
+
+setInterval(createHeart,400);
+</script>
+
+</body>
+</html>

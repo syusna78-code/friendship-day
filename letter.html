@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letter For You 💌</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#ffe6f2,#d9c2ff,#cceeff);
+overflow:hidden;
+}
+
+.card{
+width:90%;
+max-width:550px;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+animation:popup .8s;
+text-align:center;
+}
+
+h2{
+color:#ff4d8d;
+margin-bottom:20px;
+}
+
+.letter{
+text-align:left;
+line-height:1.8;
+font-size:18px;
+color:#444;
+white-space:pre-line;
+min-height:220px;
+}
+
+.btns{
+margin-top:25px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+button{
+padding:14px 28px;
+border:none;
+border-radius:30px;
+background:#ff4d8d;
+color:white;
+font-size:17px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+@keyframes popup{
+from{
+transform:scale(.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>💌 Dear Best Friend</h2>
+
+<p id="typing" class="letter"></p>
+
+<div class="btns">
+
+<button onclick="goCertificate()">
+❤️ Yes
+</button>
+
+<button onclick="goCertificate()">
+💖 Obviously Yes
+</button>
+
+</div>
+
+</div>
+
+<script>
+const text=`Happy Friendship Day! 🌸
+
+Thank you for always being there for me.
+
+Your kindness, laughter, support and beautiful heart make every day brighter.
+
+No matter where life takes us, I hope our friendship stays forever.
+
+You are one of the best gifts life has given me.
+
+Will you always be my Best Friend? ❤️`;
+
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,35);
+}
+}
+
+type();
+
+function goCertificate(){
+window.location.href="certificate.html";
+}
+</script>
+
+</body>
+</html>
