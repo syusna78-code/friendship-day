@@ -137,9 +137,7 @@ opacity:0;
 
 <h2>This Certificate is Proudly Presented To</h2>
 
-<div class="name">
-  my bestest frnd✨💗
-</div>
+<div class="name" id="certificateName"></div>
 
 <p>
 For being an amazing friend, filling every moment
@@ -185,6 +183,11 @@ heart.remove();
 }
 
 setInterval(createHeart,400);
+const name = localStorage.getItem("friendName");
+
+if(name){
+    document.getElementById("certificateName").innerHTML = name;
+}
 </script>
 
 </body>
