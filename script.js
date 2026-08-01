@@ -1,10 +1,16 @@
 // Open the letter page with a smooth fade effect
-function openLetter() {
-    document.body.style.opacity = "0";
+function openLetter(){
 
-    setTimeout(() => {
-        window.location.href = "letter.html";
-    }, 600);
+    let name = document.getElementById("friendName").value.trim();
+
+    if(name==""){
+        alert("Please enter your name ❤️");
+        return;
+    }
+
+    localStorage.setItem("friendName", name);
+
+    window.location.href="letter.html";
 }
 
 // Smooth fade when page loads
